@@ -270,7 +270,7 @@ open http://localhost:8080/doc.html
 
 
 
-```json
+```java
 # 流式对话
 POST /xiaozhi/chat
 Content-Type: application/json
