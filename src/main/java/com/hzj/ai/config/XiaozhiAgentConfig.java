@@ -9,23 +9,26 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @Author: Hzj
- * @CreateTime: 2025-10-31  21:05
+ * @CreateTime: 2025-11-06  14:57
  * @Description: ToDo
  * @Version: 1.0
  */
 
+
 @Configuration
-public class SeparateChatAssistantConfig {
+public class XiaozhiAgentConfig {
+
 
     @Autowired
-    private MongoChatMemoryStore mongoChatMemoryStore;
+    MongoChatMemoryStore mongoChatMemoryStore;
 
     @Bean
-    ChatMemoryProvider chatMemoryProvider(){
-        return memoryId -> MessageWindowChatMemory.builder()
+    ChatMemoryProvider chatMemoryProviderXiaozhi(){
+        return memoryId-> MessageWindowChatMemory.builder()
                 .id(memoryId)
                 .maxMessages(20)
                 .chatMemoryStore(mongoChatMemoryStore)
                 .build();
     }
+
 }

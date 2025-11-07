@@ -1,6 +1,25 @@
 server:
   port: 8080
 
+spring:
+  data:
+    mongodb:
+      uri: mongodb://192.168.59.101:27017/chat_memory_db
+
+  datasource:
+    url: jdbc:mysql://192.168.59.101:3306/guiguxiaozhi?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+# 开启 SQL 日志打印
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
 langchain4j:
   open-ai:
     chat-model:
