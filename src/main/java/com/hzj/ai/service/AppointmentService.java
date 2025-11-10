@@ -6,7 +6,7 @@ import com.hzj.ai.entity.Appointment;
 /**
  * @Author: Hzj
  * @CreateTime: 2025-11-07  15:28
- * @Description: ToDo
+ * @Description: 预约挂号服务端
  * @Version: 1.0
  */
 

@@ -46,7 +46,22 @@ langchain4j:
         api-key: ${DASH_SCOPE_API_KEY}
         model-name: qwen-max
 
+      embedding-model:
+        api-key: ${DASH_SCOPE_API_KEY}
+        model-name: text-embedding-v3
+
+      streaming-chat-model:
+        api-key: ${DASH_SCOPE_API_KEY}
+        model-name: qwen-plus
+
+
 logging:
   level:
     dev:
       langchain4j: debug
+
+
+
+
+# Pinecone-apiKey：
+# pcsk_qqQxt_29a2tWXfjygBy9ZxByp5uUDipM9kq7deSx6UNPve8wxsRj84rh1vngdHVtnyr3C

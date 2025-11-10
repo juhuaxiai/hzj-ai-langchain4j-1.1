@@ -5,6 +5,7 @@ import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.spring.AiService;
 import dev.langchain4j.service.spring.AiServiceWiringMode;
+import reactor.core.publisher.Flux;
 
 import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
 
@@ -18,12 +19,14 @@ import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
 
 @AiService(
         wiringMode = EXPLICIT,
-        chatModel = "qwenChatModel",
-        chatMemoryProvider = "chatMemoryProviderXiaozhi"
+        streamingChatModel = "qwenStreamingChatModel",
+        chatMemoryProvider = "chatMemoryProviderXiaozhi",
+        tools = "appointmentTools",
+        contentRetriever = "contentRetrieverXiaozhiPincone"
 )
 public interface XiaozhiAgent {
 
     @SystemMessage(fromResource = "zhaozhi-prompt-template.txt")
-    String chat(@MemoryId Long memoryId, @UserMessage String userMessage);
+    Flux<String> chat(@MemoryId Long memoryId, @UserMessage String userMessage);
 
 }

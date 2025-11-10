@@ -23,7 +23,7 @@ import java.lang.annotation.Documented;
 @Document("chat_message")
 public class ChatMessages {
     @Id
-    private Long id;
+    private ObjectId id;
 
     private Integer messageId;
 
