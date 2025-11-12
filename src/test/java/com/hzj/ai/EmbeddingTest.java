@@ -63,7 +63,8 @@ public class EmbeddingTest {
 
         Document document3 = FileSystemDocumentLoader.loadDocument("knowledge/科室信息.md");
 
-        List<Document> documents = Arrays.asList(document1,document2,document3);
+        Document document4 = FileSystemDocumentLoader.loadDocument("knowledge/多发性硬化专科.md");
+        List<Document> documents = Arrays.asList(document1,document2,document3,document4);
 
         EmbeddingStoreIngestor.builder()
                 .embeddingModel(embeddingModel)

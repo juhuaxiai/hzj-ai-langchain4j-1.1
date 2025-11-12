@@ -43,7 +43,7 @@ public class HttpUtil {
             String method,
             Map<String, String> headers,
             Map<String, String> querys,
-            Map<String, String> bodys
+            Map<String, Object> bodys
     ) throws Exception {
 
         // 拼接 URL
