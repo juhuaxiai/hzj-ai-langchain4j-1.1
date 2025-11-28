@@ -56,17 +56,6 @@ langchain4j/
 │   ├── mapper/
 │   │   └── AppointmentMapper.xml           # MyBatis映射文件
 │   └── static/                             # 静态资源
-├── src/test/java/                          # 测试代码
-│   └── com/perry/langchain4j/
-│       ├── AiServiceTest.java              # AI服务测试
-│       ├── ChatMemoryTest.java             # 聊天记忆测试
-│       ├── EmbeddingTest.java              # 向量嵌入测试
-│       ├── RAGTest.java                    # RAG检索测试
-│       ├── ToolsTest.java                  # 工具测试
-│       ├── MysqlTest.java                  # MySQL测试
-│       ├── MongoCrudTest.java              # MongoDB测试
-│       ├── PromptTest.java                 # 提示词测试
-│       └── Langchain4jApplicationTests.java # 应用测试
 └── doc/                                    # 文档和资源
     ├── rag/                                # RAG知识库文档
     ├── sql/                                # 数据库脚本
